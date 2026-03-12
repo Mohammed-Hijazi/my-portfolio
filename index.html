@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammed Hijazi - Full-Stack Developer Portfolio">
+    <title>Mohammed Hijazi | Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+ <link rel="icon" href="images/logo.png"/>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader" aria-label="Loading">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="loader-text">Mohammed Hijazi</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-inner">
+            <a href="#home" class="nav-logo" aria-label="Home">MH</a>
+            
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" class="active" role="menuitem" data-i18n="nav.home">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem" data-i18n="nav.about">About</a></li>
+                <li role="none"><a href="#skills" role="menuitem" data-i18n="nav.skills">Skills</a></li>
+                <li role="none"><a href="#experience" role="menuitem" data-i18n="nav.experience">Experience</a></li>
+                <li role="none"><a href="#projects" role="menuitem" data-i18n="nav.projects">Projects</a></li>
+                <li role="none"><a href="#contact" role="menuitem" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="nav-btn" id="langToggle" aria-label="Toggle language">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </button>
+                <button class="nav-btn" id="themeToggle" aria-label="Toggle theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-gradient hero-gradient-1"></div>
+            <div class="hero-gradient hero-gradient-2"></div>
+            <div class="hero-gradient hero-gradient-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-i18n="hero.badge">Available for work</div>
+                <h1 class="hero-title">
+                    <span data-i18n="hero.name">Mohammed Hijazi</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Full-Stack Developer | Information Engineering Student</p>
+                <p class="hero-desc" data-i18n="hero.desc">Information Engineering student with experience in full-stack web development. Skilled in React and Laravel with strong knowledge in database design and competitive programming.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.contactMe">Contact Me</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image-ring" aria-hidden="true"></div>
+                    <img src="images/img-my.jpg" alt="Mohammed Hijazi" class="hero-image" loading="eager">
+                    <div class="hero-float-card" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span>Full-Stack</span>
+                    </div>
+                    <div class="hero-float-card" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+                        <span>Developer</span>
+                    </div>
+                    <div class="hero-float-card" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <span>Problem Solver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <header class="section-header reveal">
+                <span class="section-label" data-i18n="about.label">About Me</span>
+                <h2 class="section-title" data-i18n="about.title">Who I Am</h2>
+            </header>
+            
+            <div class="about-grid">
+                <div class="about-image-container reveal-left">
+                    <img src="images/logo.png" alt="About Mohammed" class="about-image" loading="lazy">
+                    <div class="about-image-decor" aria-hidden="true"></div>
+                </div>
+                
+                <div class="about-text reveal-right">
+                    <p data-i18n="about.p1">Information Engineering student with one year of experience in full-stack web development. Proficient in React and Laravel with a strong foundation in database design and optimization.</p>
+                    <p data-i18n="about.p2">Proven ability to build scalable applications, solve complex problems through competitive programming, and collaborate effectively within development teams.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">1+</div>
+                            <div class="stat-label" data-i18n="about.expYears">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label" data-i18n="about.projects">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label" data-i18n="about.technologies">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="section-container">
+            <header class="section-header reveal">
+                <span class="section-label" data-i18n="skills.label">Skills</span>
+                <h2 class="section-title" data-i18n="skills.title">Technical Expertise</h2>
+            </header>
+            
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="section-container">
+            <header class="section-header reveal">
+                <span class="section-label" data-i18n="experience.label">Experience</span>
+                <h2 class="section-title" data-i18n="experience.title">Work History</h2>
+            </header>
+            
+            <div class="timeline" id="timeline"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="section-container">
+            <header class="section-header reveal">
+                <span class="section-label" data-i18n="projects.label">Projects</span>
+                <h2 class="section-title" data-i18n="projects.title">Featured Work</h2>
+            </header>
+            
+            <div class="projects-filters reveal" id="projectFilters"></div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section" id="certificates">
+        <div class="section-container">
+            <header class="section-header reveal">
+                <span class="section-label" data-i18n="certificates.label">Certificates</span>
+                <h2 class="section-title" data-i18n="certificates.title">Achievements</h2>
+            </header>
+            
+            <div class="certificates-grid" id="certificatesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Education & Languages Section -->
+    <section class="section" id="education">
+        <div class="section-container">
+            <div class="edu-lang-grid">
+                <div class="info-card reveal-left">
+                    <div class="info-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="info-card-title" data-i18n="education.title">Education</h3>
+                    <p class="info-card-subtitle" data-i18n="education.degree">Bachelor of Information Engineering</p>
+                    <span class="info-card-badge" data-i18n="education.status">In Progress</span>
+                </div>
+                
+                <div class="info-card reveal-right">
+                    <div class="info-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="info-card-title" data-i18n="languages.title">Languages</h3>
+                    <ul class="lang-list" id="langList"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-container">
+            <header class="section-header reveal">
+                <span class="section-label" data-i18n="contact.label">Contact</span>
+                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+            </header>
+            
+            <div class="contact-grid" id="contactGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 Mohammed Hijazi. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" role="dialog" aria-label="Certificate preview">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <img src="" alt="Certificate" class="modal-image" id="modalImage">
+        </div>
+    </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
