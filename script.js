@@ -96,6 +96,15 @@
                 demo: 'https://mohammed-hijazi.github.io/Modern-Glass-Login-UI/'
             },
             {
+                title: 'laravel-task-management-api',
+                desc: 'RESTful Task Management API built with Laravel 12, featuring authentication (Sanctum), user roles, categories, favorites, and profile management.',
+                tech: ['laravel','api'],
+                category: 'Laravel',
+                image: 'images/lvAPI.png',
+                github: 'https://github.com/Mohammed-Hijazi/laravel-task-management-api',
+                demo: 'https://github.com/Mohammed-Hijazi/laravel-task-management-api'
+            },
+                        {
                 title: 'AlgoMotion',
                 desc: 'An interactive algorithm visualizer built with AI coding tools. Created to help students deeply understand sorting algorithms and data structures through step-by-step visual animations and live pseudocode highlighting. Pure HTML/CSS/JS — no dependencies.',
                 tech: ['HTML', 'CSS','JS'],
@@ -104,6 +113,7 @@
                 github: 'https://github.com/Mohammed-Hijazi/AlgoMotion',
                 demo: 'https://mohammed-hijazi.github.io/AlgoMotion/'
             },
+
             
             {
                 title: 'University-Library-Management-System',
